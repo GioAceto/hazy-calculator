@@ -4,8 +4,18 @@ const calculate = (arr) => {
   // it filters the array and validates whether each input is a number or operand and returns NaN
   // if the operand is missing
   const filteredArray = arr.filter((value) => {
-    return value
+    if ((value == parseInt(value) ||
+      value === '+' ||
+      value === '-' ||
+      value === '*' ||
+      value === '/') &&
+      value !== '' ||
+      undefined) {
+      return value
+    }
   })
+
+  return filteredArray
   // it converts stringafied numbers to numbers
 
   // it ignores non numeric values, empty strings, and undefined
