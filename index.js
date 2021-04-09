@@ -15,7 +15,13 @@ const calculate = (arr) => {
 
 
   if (filteredArray[1] === '+') {
-
+    result = filteredArray[0] + filteredArray[2]
+  } else if (filteredArray[1] === '-') {
+    result = filteredArray[0] - filteredArray[2]
+  } else if (filteredArray[1] === '*') {
+    result = filteredArray[0] * filteredArray[2]
+  } else if (filteredArray[1] === '/') {
+    result = filteredArray[0] / filteredArray[2]
   }
   return result
 }
