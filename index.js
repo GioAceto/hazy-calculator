@@ -3,9 +3,7 @@ const goodValues = require('./good-values')
 const calculate = (arr) => {
   let result = NaN
 
-  let resultArray = arr.filter(value => {
-    return goodValues(value)
-  })
+  let resultArray = arr.filter(value => goodValues(value))
 
   switch ((resultArray[1])) {
     case '+':
@@ -24,6 +22,5 @@ const calculate = (arr) => {
 
   return result
 }
-
 
 module.exports = calculate
