@@ -2,13 +2,9 @@
 const calculate = (arr) => {
   let result = NaN
 
-  const filteredArray = (arr) => {
-    let newArray = arr.filter(value => {
-      return goodValues(value)
-    })
-
-    return newArray
-  }
+  let resultArray = arr.filter(value => {
+    return goodValues(value)
+  })
 
   switch ((resultArray[1])) {
     case '+':
@@ -29,7 +25,7 @@ const calculate = (arr) => {
 }
 
 const goodValues = (value) => {
-  if (value == Number(value)) {
+  if (value == Number(value) && value !== '') {
     return true
   } else {
     switch (value) {
