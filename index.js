@@ -7,7 +7,7 @@ const calculate = (arr) => {
   let operand = resultArray[1]
   let num2 = resultArray[2]
 
-  switch ((resultArray[1])) {
+  switch ((operand)) {
     case '+':
       result = num1 + num2
       break
